@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from './AuthContext';
-
+import { Settings, Plus, X, Check, Zap, Hash, Sparkles, Loader2, Sliders } from 'lucide-react';
 
 const PREDEFINED_CATEGORIES = [
   "Technology", "Business", "Sports", "Entertainment", "Health", 
@@ -10,17 +10,27 @@ const PREDEFINED_CATEGORIES = [
 export default function Preferences() {
   const { currentUser, updatePreferences } = useContext(AuthContext);
   const [customInput, setCustomInput] = useState('');
+  const [loading, setLoading] = useState(false);
 
+  // 1. Loading / No User State (Centered in the full screen view)
   if (!currentUser) {
     return (
-      <div className="text-center py-12">
-        <h2 className="text-2xl font-bold text-slate-900">Authentication Required</h2>
-        <p className="text-slate-600 mt-2">Please log in to manage your news preferences.</p>
+      <div className=" bg-slate-50/50 flex items-center justify-center p-4">
+        <div className="max-w-md w-full bg-white rounded-2xl border border-slate-200 shadow-xl p-8 text-center">
+            <div className="mx-auto bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                <Settings className="w-8 h-8 text-blue-500" />
+            </div>
+            <h2 className="text-2xl font-bold text-slate-900">Authentication Required</h2>
+            <p className="text-slate-500 mt-2 mb-6">Please log in to manage your news feed.</p>
+            <button className="w-full py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                Go to Login
+            </button>
+        </div>
       </div>
     );
   }
 
-  const { categories, customTopics } = currentUser.preferences;
+  const { categories, customTopics } = currentUser.preferences || { categories: [], customTopics: [] };
 
   const toggleCategory = (category) => {
     let updatedCategories = [...categories];
@@ -43,116 +53,164 @@ export default function Preferences() {
     }
   };
 
-
-    const getNews = async () => {
-      if (!currentUser) {
-        alert("You must be logged in to run the script!");
-        return;
-      }
-  
-      // setIsLoading(true);
-      // setPythonResult(null);
-  
-      try {
-        const response = await fetch('http://localhost:3001/api/run-news-report', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          // We pass the currentUser object inside the request body
-          body: JSON.stringify({ currentUser }),
-        });
-  
-        const data = await response.json();
-  
-        if (response.ok) {
-          // Data.result contains whatever Python printed to the console
-          // setPythonResult(data.result);
-        } else {
-          // setPythonResult(`Error: ${data.error}`);
-        }
-      } catch (error) {
-        console.error("Failed to connect to backend:", error);
-        // setPythonResult("Failed to connect to the backend server.");
-      }
-    };
-  
-
   const removeCustomTopic = (topic) => {
     const updatedTopics = customTopics.filter(t => t !== topic);
     updatePreferences({ categories, customTopics: updatedTopics });
   };
 
+  const getNews = async () => {
+    setLoading(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      // In real app: fetch logic here
+      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-10 mt-8">
-    
-    <div className='flex items-center justify-between'>
-      <h2 className="text-3xl font-extrabold text-slate-900 mb-4 border-b pb-4">Feed Preferences</h2>
-      <button
-      onClick={getNews}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border `}
-      >Get Your News Report Now</button>
-      </div>  
-      <div className="mb-10">
-        <h3 className="text-lg font-semibold text-slate-800 mb-4">Broad Categories</h3>
-        <p className="text-sm text-slate-500 mb-4">Select the general topics you want to see in your feed.</p>
-        <div className="flex flex-wrap gap-3">
-          {PREDEFINED_CATEGORIES.map(cat => {
-            const isSelected = categories.includes(cat);
-            return (
-              <button 
-                key={cat} 
-                onClick={() => toggleCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border 
-                  ${isSelected 
-                    ? 'bg-blue-600 text-black border-blue-600 shadow-md transform scale-105' 
-                    : 'bg-white text-slate-600 border-slate-300 hover:border-blue-400 hover:text-blue-600'
-                  }`}
-              >
-                {cat} {isSelected && <span className="ml-1 text-green-400">✓</span>}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-
-      <div>
-        <h3 className="text-lg font-semibold text-slate-800 mb-4">Specific Keywords</h3>
-        <p className="text-sm text-slate-500 mb-4">Track niche stories by adding exact phrases or keywords.</p>
+    // 2. Main Wrapper: Matches Home.js exactly (min-h-screen, bg-slate-50/50, same padding)
+    <div className="min-h-screen bg-slate-50/50 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         
-        <form onSubmit={addCustomTopic} className="flex gap-2 mb-6">
-          <input 
-            type="text" 
-            value={customInput} 
-            onChange={(e) => setCustomInput(e.target.value)} 
-            placeholder='e.g., "The war in Iran"' 
-            className="flex-grow px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow"
-          />
-          <button 
-            type="submit"
-            className="px-6 py-2 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors whitespace-nowrap"
-          >
-            Add
-          </button>
-        </form>
+        {/* Header Section */}
+        <header className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2">
+            Feed <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-300">Controls</span>
+          </h1>
+          <p className="text-lg text-slate-500">Fine-tune your algorithms and data sources.</p>
+        </header>
 
-        {customTopics.length > 0 ? (
-          <ul className="space-y-2">
-            {customTopics.map((topic, index) => (
-              <li key={index} className="flex justify-between items-center bg-slate-50 px-4 py-3 rounded-lg border border-slate-100">
-                <span className="text-slate-700 font-medium">"{topic}"</span>
-                <button 
-                  onClick={() => removeCustomTopic(topic)}
-                  className="text-red-500 hover:text-red-700 text-sm font-medium px-3 py-1 bg-red-50 hover:bg-red-100 rounded-md transition-colors"
+        {/* Control Dashboard */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          {/* Main Panel (Left - 2/3 width) */}
+          <div className="lg:col-span-2 space-y-8">
+             
+             {/* Action Banner */}
+             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <Sparkles className="text-blue-500" size={20} />
+                        Generate New Report
+                    </h3>
+                    <p className="text-slate-500 mt-1">Run our Python engine to curate a fresh batch of news based on your new settings.</p>
+                </div>
+                <button
+                    onClick={getNews}
+                    disabled={loading}
+                    className={`flex items-center justify-center px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg shadow-blue-500/20
+                    ${loading 
+                        ? 'bg-slate-100 text-slate-400 cursor-not-allowed' 
+                        : 'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:-translate-y-0.5 hover:shadow-blue-500/40'
+                    }`}
                 >
-                  Remove
+                    {loading ? <Loader2 className="animate-spin mr-2" size={20} /> : <Zap size={20} className="mr-2 fill-current" />}
+                    {loading ? 'Processing...' : 'Run Analysis'}
                 </button>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="text-sm text-slate-400 italic">No specific topics added yet.</p>
-        )}
+             </div>
+
+            {/* Categories Card */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100">
+                <div className="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 className="text-xl font-bold text-slate-900">Broad Categories</h3>
+                        <p className="text-sm text-slate-500">Select the general topics for your feed.</p>
+                    </div>
+                    <span className="hidden sm:inline-block text-xs font-bold uppercase tracking-wider text-blue-500 bg-blue-50 px-3 py-1 rounded-full">
+                        {categories.length} Active
+                    </span>
+                </div>
+                
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {PREDEFINED_CATEGORIES.map(cat => {
+                        const isSelected = categories.includes(cat);
+                        return (
+                        <button 
+                            key={cat} 
+                            onClick={() => toggleCategory(cat)}
+                            className={`relative group flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 border-2
+                            ${isSelected 
+                                ? 'border-blue-500 bg-blue-50/50 text-blue-700' 
+                                : 'border-slate-100 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50'
+                            }`}
+                        >
+                            {isSelected && (
+                                <div className="absolute top-1 right-1">
+                                    <Check size={12} className="text-blue-500" strokeWidth={4} />
+                                </div>
+                            )}
+                            {cat}
+                        </button>
+                        )
+                    })}
+                </div>
+            </div>
+          </div>
+
+          {/* Sidebar Panel (Right - 1/3 width) */}
+          <div className="lg:col-span-1">
+             <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col">
+                <div className="mb-6">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <Sliders size={20} className="text-slate-400" />
+                        Specific Keywords
+                    </h3>
+                    <p className="text-sm text-slate-500 leading-relaxed">
+                        Add specific companies, people, or events to track (e.g., "NVIDIA", "Election").
+                    </p>
+                </div>
+                
+                <form onSubmit={addCustomTopic} className="relative mb-6">
+                    <div className="relative flex items-center">
+                        <Hash className="absolute left-3 text-slate-400" size={16} />
+                        <input 
+                            type="text" 
+                            value={customInput} 
+                            onChange={(e) => setCustomInput(e.target.value)} 
+                            placeholder="Add keyword..." 
+                            className="w-full pl-10 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm font-medium text-slate-700 placeholder:text-slate-400"
+                        />
+                        <button 
+                            type="submit"
+                            disabled={!customInput.trim()}
+                            className="absolute right-2 p-1.5 bg-slate-900 text-white rounded-lg hover:bg-slate-700 disabled:bg-slate-200 disabled:cursor-not-allowed transition-colors"
+                        >
+                            <Plus size={16} />
+                        </button>
+                    </div>
+                </form>
+
+                {/* Tag Cloud */}
+                <div className="flex flex-wrap gap-2 content-start">
+                    {customTopics.length > 0 ? (
+                        customTopics.map((topic, index) => (
+                        <span 
+                            key={index} 
+                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-sm font-medium text-slate-700 shadow-sm group hover:border-red-200 hover:bg-red-50 transition-colors cursor-default"
+                        >
+                            {topic}
+                            <button 
+                            onClick={() => removeCustomTopic(topic)}
+                            className="ml-2 text-slate-400 group-hover:text-red-500 focus:outline-none"
+                            >
+                            <X size={14} />
+                            </button>
+                        </span>
+                        ))
+                    ) : (
+                        <div className="w-full py-12 text-center border-2 border-dashed border-slate-100 rounded-xl bg-slate-50/50">
+                            <p className="text-sm text-slate-400 font-medium">No active keywords</p>
+                        </div>
+                    )}
+                </div>
+             </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );
