@@ -1,0 +1,102 @@
+[
+  {
+    "categorie": "Technology",
+    "scrappableSites": [
+      { "url": "https://techcrunch.com", "tag": "li",  "class":"" },
+      { "url": "https://arstechnica.com", "tag": "article", "class": "" },
+      { "url": "https://www.cnet.com", "tag": "div", "class": "c-storiesNeonMeta u-flexbox-column c-storiesNeonHighlightsCard_content u-flex-grow isFirst" },
+      { "url": "https://www.engadget.com", "tag": "div", "class": "PostCard" },
+      { "url": "https://techwireasia.com", "tag": "div", "class": "elementor-element elementor-element-7db98116 e-con-full e-flex e-con e-parent e-lazyloaded" }
+    ]
+  },
+  {
+    "categorie": "Business",
+    "scrappableSites": [
+      { "url": "https://www.cnbc.com", "tag": "div", "class": "Card-titleContainer" },
+      { "url": "https://www.foxbusiness.com", "tag": "article", "class": "info-header" },
+      { "url": "https://www.moneyweb.co.za", "tag": "article", "class": "post" },
+      { "url": "https://nearshoreamericas.com", "tag": "article", "class": "post type-post" },
+      { "url": "https://www.aljazeera.com/economy/", "tag": "article", "class": "gc__content" }
+    ]
+  },
+  {
+    "categorie": "Sports",
+    "scrappableSites": [
+      { "url": "https://www.espn.com", "tag": "section", "class": "col-three" },
+      { "url": "https://bleacherreport.com", "tag": "div", "class": "articleSummary" },
+      { "url": "https://www.bbc.com/sport", "tag": "div", "class": "ssrcss-11r1m41-Promo" },
+      { "url": "https://www.cricbuzz.com", "tag": "div", "class": "cb-col cb-col-100 cb-ls-itms" },
+      { "url": "https://www.cbssports.com", "tag": "article", "class": "article" }
+    ]
+  },
+  {
+    "categorie": "Entertainment",
+    "scrappableSites": [
+      { "url": "https://www.hollywoodreporter.com", "tag": "article", "class": "c-story" },
+      { "url": "https://deadline.com", "tag": "article", "class": "post" },
+      { "url": "https://mashable.com", "tag": "div", "class": "w-full mt-4" },
+      { "url": "https://www.indiewire.com", "tag": "article", "class": "c-story" },
+      { "url": "https://www.dailydot.com", "tag": "div", "class": "article-post" }
+    ]
+  },
+  {
+    "categorie": "Health",
+    "scrappableSites": [
+      { "url": "https://medlineplus.gov", "tag": "li", "class": "" },
+      { "url": "https://kffhealthnews.org", "tag": "article", "class": "post" },
+      { "url": "https://www.healthcaredive.com", "tag": "li", "class": "row feed__item" },
+      { "url": "https://globalhealthnow.org", "tag": "div", "class": "article-list-item" },
+      { "url": "https://www.npr.org/sections/health-shots/", "tag": "article", "class": "item" }
+    ]
+  },
+  {
+    "categorie": "Science",
+    "scrappableSites": [
+      { "url": "https://www.the-scientist.com", "tag": "article", "class": "" },
+      { "url": "https://www.sciencedaily.com", "tag": "div", "class": "latest-head" },
+      { "url": "https://phys.org", "tag": "article", "class": "news-item" },
+      { "url": "https://www.space.com", "tag": "div", "class": "listingResult" },
+      { "url": "https://www.snexplores.org", "tag": "li", "class": "post-item" }
+    ]
+  },
+  {
+    "categorie": "Politics",
+    "scrappableSites": [
+      { "url": "https://www.politico.com", "tag": "article", "class": "story-frag" },
+      { "url": "https://www.propublica.org", "tag": "div", "class": "article-excerpt" },
+      { "url": "https://www.axios.com", "tag": "div", "class": "Story_story__" },
+      { "url": "https://truthout.org", "tag": "article", "class": "post" },
+      { "url": "https://thehill.com", "tag": "article", "class": "post" }
+    ]
+  },
+  {
+    "categorie": "Environment",
+    "scrappableSites": [
+      { "url": "https://insideclimatenews.org", "tag": "article", "class": "post" },
+      { "url": "https://news.mongabay.com", "tag": "article", "class": "post" },
+      { "url": "https://grist.org", "tag": "article", "class": "article-card" },
+      { "url": "https://earth.org", "tag": "div", "class": "post" },
+      { "url": "https://www.ecowatch.com", "tag": "article", "class": "" }
+    ]
+  },
+  {
+    "categorie": "Finance",
+    "scrappableSites": [
+      { "url": "https://finance.yahoo.com", "tag": "li", "class": "js-stream-content" },
+      { "url": "https://www.thestreet.com", "tag": "div", "class": "l-grid--item" },
+      { "url": "https://www.kiplinger.com", "tag": "div", "class": "listingResult" },
+      { "url": "https://www.thisismoney.co.uk", "tag": "div", "class": "article" },
+      { "url": "https://www.investing.com", "tag": "article", "class": "js-article-item" }
+    ]
+  },
+  {
+    "categorie": "Art",
+    "scrappableSites": [
+      { "url": "https://hyperallergic.com", "tag": "article", "class": "post" },
+      { "url": "https://artasiapacific.com", "tag": "div", "class": "news-item" },
+      { "url": "https://artdaily.com", "tag": "div", "class": "art-news" },
+      { "url": "https://www.artforum.com", "tag": "article", "class": "post" },
+      { "url": "https://www.artnews.com", "tag": "article", "class": "c-story" }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "email": "hassenntehah@gmail.com",
+    "password": "1234",
+    "preferences": {
+      "categories": [
+        "Technology",
+        "Business",
+        "Health"
+      ],
+      "customTopics": []
+    }
+  },
+  {
+    "email": "hassenbensmy@gmail.com",
+    "password": "1234",
+    "preferences": {
+      "categories": [
+        "Sports",
+        "Art"
+      ],
+      "customTopics": []
+    }
+  }
+]

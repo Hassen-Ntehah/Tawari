@@ -1,0 +1,355 @@
+
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head><meta charset="utf-8"><title>Daily Brief</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f6f6f6; margin: 0; padding: 0; direction: rtl; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; padding: 20px; border-radius: 8px; }
+        .header { text-align: center; padding-bottom: 20px; border-bottom: 2px solid #eeeeee; margin-bottom: 20px; }
+        .header h1 { color: #0061af; margin: 0; font-size: 24px; }
+        .intro { color: #555; font-size: 14px; margin-bottom: 25px; text-align: center; }
+        
+        /* ARTICLE CARD STYLE - List View */
+        .article-card { 
+            display: flex; 
+            flex-direction: row; /* Image side-by-side with text */
+            border-bottom: 1px solid #eee; 
+            padding: 15px 0; 
+            align-items: flex-start;
+        }
+        .article-card:last-child { border-bottom: none; }
+        
+        /* IMAGE STYLING - Small & Professional */
+        .img-wrapper { 
+            flex: 0 0 140px; /* Fixed width */
+            margin-left: 15px; /* Spacing between img and text (RTL) */
+        }
+        img { 
+            width: 140px; 
+            height: 100px; 
+            margin:5px;
+            object-fit: cover; 
+            border-radius: 4px; 
+            display: block; 
+        }
+        
+        /* TEXT STYLING */
+        .content-wrapper { flex: 1; }
+        h3 { margin: 0 0 8px 0; font-size: 16px; line-height: 1.4; }
+        a { text-decoration: none; color: #222; font-weight: bold; }
+        a:hover { color: #0061af; text-decoration: underline; }
+        p { margin: 0; font-size: 13px; color: #666; line-height: 1.5; }
+        
+        .footer { text-align: center; font-size: 11px; color: #999; margin-top: 30px; }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"><h1>طواري اليوم</h1></div>
+            <div class="intro">(اضغط علي الرابط للمزيد من المعلمات) ذا لي خلك اليوم بختصار</div>
+    
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/KcdmYbugYP_N0Qe7Ba0jmH4HtUwH4q7-TbYECdID6PM/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HRV9IZWFsdGhjYXJlX0NoaW5hX2V4cG8uanBn.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/ge-healthcare-barda-ink-35m-expansion-to-ai-enabled-imaging-deal/812560/">GE HealthCare, BARDA ink $35M expansion to AI-enabled imaging deal</a></h3>
+                        <p>The jointly funded project positions GE HealthCare to develop ultrasound technologies that non-expert users can operate.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/ZXc8Z2jNAoSrh8SyNixuZvW-GyxWFVdbWmmox-BKUs8/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9YYXZpZXJfTGFsYW5uZS1UYXV6aWEtaGVhbHRoY2FyZS1tZXJnZXJzLnBuZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/prime-healthcare-foundation-acquires-central-maine-healthcare/812449/">Prime Healthcare Foundation acquires Maine health system</a></h3>
+                        <p>Illustration: Xavier Lalanne-Tauzia for Industry Dive</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/kkZGP6wQ9U3NHN6GHy1Yog3v216fkPeI60BEd7tvdB4/g:nowe:0:646/c:5030:2842/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMjg4NjcwMjc0LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/fda-reverses-course-review-moderna-approval-application-influenza-/812468/">FDA reverses course on Moderna’s flu vaccine</a></h3>
+                        <p>Moderna said the agency agreed to move forward and review its application for the mRNA-based shot.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/qZFseAHCjeo7cMrCgN2G-fO0qr5J4H4jGprm4N4TB_A/g:nowe:744:0/c:1264:714/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9DZW50ZXJXZWxsX1dlbmRvdmVyX0dyYW5kX09wZW5pbmcuanBn.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/humana-centerwell-acquires-maxhealth-arsenal-capital-partners/812355/">Humana’s CenterWell buys primary care provider MaxHealth</a></h3>
+                        <p>The addition of 82 owned and affiliated clinics in Florida comes as Humana doubles down on its primary care portfolio.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/N0k5FWWgyzIW5_1Pq1YXSbfsFMNOHg99lHy78SwX6SI/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9YYXZpZXJfTGFsYW5uZS1UYXV6aWEtaGVhbHRoY2FyZS1lYXJuaW5ncy5wbmc=.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/ascension-posts-net-profit-first-half-2026-invest-outpatient-growth/812298/">Ascension posts net profit as it looks to outpatient growth</a></h3>
+                        <p>Illustration: Xavier Lalanne-Tauzia for Industry Dive</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/ol2A-gJoEDZEzF1nTZs8ZtKicIr65anwt4Lg1LljY2s/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjUwNjE0MjI2LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/demand-for-outpatient-medical-buildings-growing-reports/812336/">Demand for outpatient medical buildings growing: reports</a></h3>
+                        <p>The average fit-out cost to turn space into a medical office building is $412 per square foot, not counting structural upgrades, according to an analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/kK_w24xk5FCmNuVkRY8M2v4ZcSfwdoO8x47F5iSkV4A/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9BbXdlbGxfRGV2aWNlcy1Db25zdW1lci1pUGhvbmUtRGVzay1WaXNpdC1Xb21hbi5qcGc=.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/amwell-2025-earnings-lower-revenue-guidance-2026/812241/">Amwell expects lower revenue in 2026</a></h3>
+                        <p>The health technology company has divested assets and refocused on its core offering, resulting in a smaller top line, executives said on an earnings call last week.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/IBqhapAouKi1PdCG2xtI8wRWW5CsLnDt04VA4hBpxq0/g:nowe:0:9/c:1023:578/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjI3NzY4OTQ0LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/rfk-kennedy-elevates-counselors-hhs-midterms/812180/">HHS elevates officials into Kennedy’s inner circle in advance of midterms</a></h3>
+                        <p>The HHS secretary has four new senior advisors to help him “move faster and go further” on his Make America Healthy Again agenda. The appointments preempt the GOP’s midterm messaging push.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/n1DtOo1c6LFNvfZwNk_VUYOTlhKf5cbQrJ99UJcAi7k/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9wYXRpZW50X2RvY3Rvcl90YWJsZXRfbWVkaWNhbF9yZWNvcmRzLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/tefca-cms-health-tech-ecosystem-data-exchange-astp/812165/">TEFCA, Health Tech Ecosystem are complementary data sharing efforts: officials</a></h3>
+                        <p>The Health Technology Ecosystem, which the HHS and CMS launched last summer, could accelerate advancements in data exchange and isn’t in competition with the ASTP's own interoperability project, officials said.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/kF1T07OOToXNgOGdfy2gbaFTyzyybJpyDzY9LaxVXXA/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy05NTA3MDI1NC5qcGc=.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/drug-costs-supply-chain-energy-commerce-pharmacy-benefit-managers-gop-policies/812043/">Lowering drug costs is on Republicans’ minds. Democrats say GOP policies don’t help.</a></h3>
+                        <p>Lawmakers on both sides of the aisle decried the nation’s high drug costs during a House subcommittee hearing last week. Democrats argued Medicaid cuts and lapsed ACA subsidies are worsening the problem.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/MaZSLSs4FzbA8_nN7vnAwD-QQrj-CUZON7G1i_KO7AQ/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzQzMzQ5NTU4LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/generative-ai-cybersecurity-healthcare-taylor-lehmann-google-cloud/811890/">How the generative AI boom changes healthcare cybersecurity</a></h3>
+                        <p>Taylor Lehmann, a security executive at Google Cloud, discusses cyber risks in AI systems and how healthcare organizations should prepare.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/u7DuEvNfeD04ze5swH6WFv14MR9NSceYO0KJItWwaVw/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZXNpemVkR2V0dHlJbWFnZXMtMTg1NzUwMjY2Ny5qcGc=.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/top-healthcare-conferences-2026/760876/">Top healthcare conferences to attend in 2026</a></h3>
+                        <p>These are the events healthcare leaders should plan for this year, covering topics like digital health, rural care and financial management.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/mKf0ATZzO7q-bZD3CMXMR3c3R8SWRdD_U8TdKGUo974/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yTTQyM0oxLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/tenet-expects-250m-hit-loss-aca-subsidies/812014/">Tenet expects $250M hit from loss of ACA subsidies this year</a></h3>
+                        <p>Still, the for-profit hospital operator’s projected loss is less than some of its peers, and Tenet said it expected to grow its earnings in 2026.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/jUyV-lgdsdhBRD7u8VmMpRfZieiJmWzWxih3cJ1-iFc/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTc3MjUwODcxX0h1bWFuYV9yZXNpemVkLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/humana-medicare-advantage-2026-growth/811917/">Humana could end 2026 as the largest Medicare Advantage insurer</a></h3>
+                        <p>Humana is nabbing MA members while UnitedHealthcare sheds lives. That leaves the companies neck and neck when it comes to MA enrollment, though Humana’s growth is a gamble at a time of elevated medical spending.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/3QvVJGmyjTPvbtuByrheJgN4Fu1w4RWbPFxN2EZZW04/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMDgwMzg5Mjc0LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/kaiser-reaches-settlement-dol-alleged-mental-healthcare-access-failures/812024/">Kaiser reaches settlement with DOL over alleged mental healthcare access failures</a></h3>
+                        <p>The Department of Labor alleged Kaiser didn’t offer adequate provider networks and used patient questionnaires to prevent members from receiving care.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/ectIOTYcnczHXKPMfQ8cXHeYf9DkLOTu7RP8OiK7Y7Q/g:nowe:0:0/c:3172:1792/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy00NTY2OTE5ODguanBn.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/cdc-moves-to-cut-600-million-grants-democrat-led-states-hhs/811897/">CDC moves to cut $600M in grants to Democrat-led states</a></h3>
+                        <p>The cut grants, which were viewed by Healthcare Dive, fund a wide swath of areas including workforce initiatives, STI prevention measures, health equity proposals and others in California, Colorado, Illinois and Minnesota.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/nb2OJ_YX_Za5s1EE1RJMvXknSCJauKzGh7kw2Gd-WBc/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JTUdfMzgwOS5qcGVn.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/house-republicans-subpeona-health-insurers-aca-fraud/811883/">House Republicans subpoena 8 health insurers over ACA fraud</a></h3>
+                        <p>The subpoenas request additional documents and information from CVS, Centene, Elevance and more, and suggest House Republicans are considering legislation to combat what they view as rampant fraud in the ACA exchanges.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/uGWZuifW8QomWAzp-hD7ZrpJ76jJtPlRcMDGiYQp3J8/g:nowe:0:442/c:5112:2888/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzAyNTA5NzIzLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/cvs-q4-2025-outlook-stable-ma-caremark/811781/">CVS holds 2026 guidance steady as turnaround plan bears fruit</a></h3>
+                        <p>The healthcare giant outperformed to close out 2025, and expects its finances to improve further this year. Still, proposed Medicare Advantage rates could be an issue moving forward.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/LIEh_NBnEg57XmAF4vwCT3DeL4tw4bEZd_Kb3uo2Pfc/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Nb2Rlcm5hX1Bob3RvXzEuSlBH.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/moderna-fda-influenza-mrna-refuse-to-file/811921/">FDA refuses to review Moderna’s mRNA flu vaccine</a></h3>
+                        <p>Moderna claimed that the decision, issued by top vaccine regulator Vinay Prasad, was “inconsistent” with prior FDA communications and went against the regulator’s established guidance for flu shots.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/mgrWe46q84ggcXsMzX9vBwaNTwgy8oujotY7qwCFoLc/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yS0MwWTJFLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/cigna-layoffs-2000-workers-worldwide/811844/">Cigna to lay off 2,000 workers worldwide</a></h3>
+                        <p>Cigna’s layoffs follow other recent downsizing announcements from health insurers looking to cut costs during an era of heightened medical spending.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/jiZAKLc5pmjqcY6VWyI0dMUkmri-Yczg2SFe3wzCkBg/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yUFA4MFdILmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/centene-loss-q4-2025-2026-outlook-cnc/811564/">Centene swings to loss but predicts stabilization in 2026</a></h3>
+                        <p>Centene outperformed in the fourth quarter, while predicting earnings growth in 2026 — a rarity among managed care companies’ generally dour outlooks.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/JU16ptUEmOgZJbAugKcX7wNOmyyhfaBm6yCAMwOCPAQ/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMjk5MTU3NTQ1LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/cms-aca-rule-catastrophic-plans-standard-plans/811838/">CMS proposes sweeping ACA exchange rule</a></h3>
+                        <p>The CMS said the regulation should remove barriers to more affordable health plans like catastrophic coverage, as enrollment on the exchanges falls following the expiration of stronger financial assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/ghOO5Ab08xWxhdP7EhdwH4_kF4wL65wL-6tbknBU5fw/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNjY4NDM4OTA4LmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/kaiser-permanente-strike-third-week-lab-pharmacy-workers-join/811694/">Kaiser Permanente strike expands as pharmacy, lab workers walk out</a></h3>
+                        <p>More than 3,000 pharmacy technicians, pharmacy assistants and clinical laboratory professionals joined the strike, which entered its third week on Monday.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/F8jBkW8WIrVbySuWcvoV4O36qyxnVJEbquDfWNP0xng/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JVl9mbHVpZF9yZXNpemVkLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/baxter-cuts-roughly-90-jobs-at-iv-solutions-plant-that-recovered-from-hurri/811824/">Baxter cuts roughly 90 jobs at IV solutions plant that recovered from Hurricane Helene</a></h3>
+                        <p>Baxter’s North Cove site made about 60% of the U.S. supply of IV fluids. Hospital demand for IV solutions in the U.S. is lower than before Hurricane Helene, the company said.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://imgproxy.divecdn.com/mOhMk7f8Qyu_XC1EqntYnj009Fm8-g1aByiL-sXDWIc/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yQTczNlkxLmpwZw==.webp" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.healthcaredive.com/news/kaiser-bumped-operating-income-2025-despite-rising-expenses/811674/">Kaiser increased its operating income in 2025, despite rising expenses</a></h3>
+                        <p>The integrated healthcare conglomerate nearly tripled its operating income last year compared to 2024.</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x3375+0+460/resize/800/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fde%2Fff%2F11df4deb41c082bef1a1bfcc8ea6%2Fgettyimages-2235638584.jpg" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.npr.org/sections/shots-health-news/2026/01/12/nx-s1-5668378/flu-vaccine-children-cdc">Public Health</a></h3>
+                        <p>A child receives an immunization at a Florida pediatrician's office in Sept. 2025.Joe Raedle/Getty Images North Americahide caption</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x1688+0+157/resize/800/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fe7%2F76%2F82463bac4bbcab7af8b243db0e36%2F1210-ai-primary-care01.jpg" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.npr.org/sections/shots-health-news/2026/01/09/nx-s1-5670382/primary-care-doctor-shortage-medical-ai-diagnosis">Health Inc.</a></h3>
+                        <p>Tammy MacDonald is a director at Blue Hills Adult Education in Dedham, Mass.  When she needed a new primary care doctor, she was turned away by 10 practices. A few told her she could get an appointment after waiting a year and a half, or even two years.Jesse Costa/WBURhide caption</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4560x2565+0+237/resize/300/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F3a%2Fb8%2F523efe27463592d845c6d31a01b2%2F01-fritzler-brothers.jpg" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.npr.org/sections/shots-health-news/2026/01/08/nx-s1-5578296/meth-addiction-montana-crow-reservation-recovery-rebuild">Shots - Health News</a></h3>
+                        <p>Lonny and Teyon Fritzler stand outside their childhood home on the Crow Indian Reservation in Lodge Grass, Mont. The house has sat empty for years since both men left town to recover from their meth addictions.Katheryn Houghton/KFF Health Newshide caption</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6437x3621+0+713/resize/300/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F6e%2Fcd%2Fcd6bd3194521899d975efb645b0b%2Fwegovy-starter-pills-in-lab-plate-edited.jpeg" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.npr.org/sections/shots-health-news/2026/01/05/nx-s1-5667020/wegovy-pill-obesity-weight-loss">Treatments</a></h3>
+                        <p>A pill form of Wegovy, the popular obesity drug previously available only by injection, is now being stocked by pharmacies.Novo Nordiskhide caption</p>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="img-wrapper">
+                        <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1141x642+14+0/resize/300/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F90%2F07%2Fd96219694c16b166e9cf4493f464%2Fimg-8556.JPG" alt="News Thumbnail" width="140" height="100">
+                    </div>
+                    <div class="content-wrapper">
+                        <h3><a href="https://www.npr.org/sections/shots-health-news/2025/12/31/nx-s1-5655252/u-s-farmer-insurance-premiums-tariffs-seeds-fertilizer-inflation-iowa">Policy-ish</a></h3>
+                        <p>Prairie Star Farm in Allamakee County, Iowa is home to 180 dairy cows. Owners Meghan and John Palmer say growing health care costs add to the financial pressures facing many farm families, including theirs.Meghan Palmerhide caption</p>
+                    </div>
+                </div>
+                <p>Unable to fetch news at this moment.</p>
+            <div class="footer">شطاري لديكم مافيتكم شي</div>
+        </div>
+    </body>
+    </html>
+    
