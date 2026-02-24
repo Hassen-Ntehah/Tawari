@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 import { AuthProvider, AuthContext } from './AuthContext';
 import { Menu, X, LogOut, User, Settings, LogIn, ChevronRight } from 'lucide-react';
 import Home from './Home';
-import Preferences from './Preferences';
+import Preferences from './preferences';
 import Login from './Login'; 
 import SignUp from './SignUp';
 
